@@ -27,6 +27,8 @@ const spell = (request, response, params) => {
 
 const getLetter = (letter) => {
   const letterEmojiArray = emojis.alphabet[letter];
+  if(!letterEmojiArray)
+    return letter;
   const emojiArrayLength = letterEmojiArray.length;
   const randIndex = getRandomInt(emojiArrayLength);
 

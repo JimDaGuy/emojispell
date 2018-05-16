@@ -80,7 +80,10 @@ const alphabet = {
   ],
   Z: [
     ":zfs:", ":dpunch:", ":mta_z:"
-  ]
+  ],
+  ' ': [
+    ":nbsp:",
+  ],
 };
 
 module.exports.alphabet = alphabet;

@@ -4,7 +4,7 @@ const spell = (request, response, params) => {
   var defaultText;
 
   if(!params.text) {
-    defaultText = "Hiya";
+    defaultText = "Hi ya";
   } else {
     defaultText = params.text;
   }

@@ -1,0 +1,19 @@
+{
+  "name": "emojispell",
+  "version": "1.0.0",
+  "description": "Emoji Speller API for CSH Slack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JimDaGuy/emojispell.git"
+  },
+  "author": "James DiGrazia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JimDaGuy/emojispell/issues"
+  },
+  "homepage": "https://github.com/JimDaGuy/emojispell#readme"
+}

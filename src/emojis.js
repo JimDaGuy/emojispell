@@ -111,6 +111,15 @@ const alphabet = {
   9: [
     ":nine:"
   ],
+  '!': [
+    ":exclamation:", ":grey_exclamation:"
+  ],
+  '-': [
+    ":heavy_minus_sign:"
+  ],
+  '?': [
+    ":question:", ":grey_question:"
+  ],
   ' ': [
     ":nbsp:",
   ],

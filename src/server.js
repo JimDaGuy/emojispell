@@ -13,6 +13,10 @@ const onRequest = (request, response) => {
   const parsedUrl = url.parse(request.url);
   const params = query.parse(parsedUrl.query);
   const path = parsedUrl.pathname;
+
+  response.writeHead(200, {'Content-Type': 'text/html'});
+  reponse.write("<div>Bop</div>");
+  response.end();
 };
 
 http.createServer(onRequest).listen(port);

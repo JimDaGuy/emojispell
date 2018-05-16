@@ -1,86 +1,86 @@
-const alphabet = {[
-  "A": {[
-    ":amazon:", ":angular:", ":ansible:", ":arch:", ":atlassian:" ":oauth:",
+const alphabet = {
+  A: [
+    ":amazon:", ":angular:", ":ansible:", ":arch:", ":atlassian:", ":oauth:",
     ":a:", ":mta_a:"
-  ]},
-  "B": {[
+  ],
+  B: [
     ":bitcoin:", ":bootstrap:", ":blogger:", ":b:", ":mta_b:"
-  ]},
-  "C": {[
+  ],
+  C: [
     ":c:", ":cpp:", ":csharp:", ":flag-colo:", ":star_and_crescent:", ":copyright:",
      ":mta_c:"
-  ]},
-  "D": {[
+  ],
+  D: [
     ":d:", ":duo:", ":mta_d:"
-  ]},
-  "E": {[
+  ],
+  E: [
     ":el-diablo:", ":microsoft-edge:", ":erlang:", ":mta_e:"
-  ]},
-  "F": {[
+  ],
+  F: [
     ":facebook:", ":fedora:", ":flash:", ":fortran:", ":fakku:", ":mta_f:"
-  ]},
-  "G": {[
+  ],
+  G: [
     ":360:", ":google:", ":mta_g:"
-  ]},
-  "H": {[
+  ],
+  H: [
     ":honda:", ":hotel:", ":pisces:"
-  ]},
-  "I": {[
+  ],
+  I: [
     ":indeed:", ":information_source:"
-  ]},
-  "J": {[
+  ],
+  J: [
     ":j-lang:", ":mta_j:"
-  ]},
-  "K": {[
+  ],
+  K: [
     ":heroku:", ":kotlin:", ":k:"
-  ]},
-  "L": {[
+  ],
+  L: [
     ":litecoin:", ":mta_l:"
-  ]},
-  "M": {[
+  ],
+  M: [
     ":massdrop:", ":la_metro:", ":monero:", ":monster_energy:", ":paris_metro:",
     ":wmata:", ":scorpius:", ":virgo:", ":m:", ":mta_m:"
-  ]},
-  "N": {[
+  ],
+  N: [
     ":n64:", ":netscape:", ":njt:", ":npm:", ":novell:", ":capricorn:", ":mta_n:"
-  ]},
-  "O": {[
+  ],
+  O: [
     ":openshift:", ":openstack:", ":opera:", ":oracle:", ":overwatch:", ":json:",
     ":alstom:", ":o:", ":o2:"
-  ]},
-  "P": {[
+  ],
+  P: [
     ":path:", ":playstation:", ":p:"
-  ]},
-  "Q": {[
+  ],
+  Q: [
     ":quora:", ":mta_q:"
-  ]},
-  "R": {[
+  ],
+  R: [
     ":r-lang:", ":rockstar:", ":rust-lang:", ":registered:", ":mta_r:"
-  ]},
-  "S": {[
+  ],
+  S: [
     ":sharepoint:", ":sass:", ":svn:", ":heavy_dollar_sign:", ":mta_s:"
-  ]},
-  "T": {[
+  ],
+  T: [
     ":tumblr:", ":tesla-motors:", ":jimbo:", ":mbta:", ":pgh_t:", ":latin_cross:"
-  ]},
-  "U": {[
+  ],
+  U: [
     ":unilever:", ":unreal:", ":ophiuchus:"
-  ]},
-  "V": {[
+  ],
+  V: [
     ":vagrant:", ":venmo:", ":vitess:", ":vue:", ":vulf:", ":vim:", ":aries:"
-  ]},
-  "W": {[
+  ],
+  W: [
     ":wegmans:", ":warcraft:", ":wordpress:", ":mta_w:"
-  ]},
-  "X": {[
+  ],
+  X: [
     ":microsoft-excel:", ":spacex:", ":heavy_multiplication_x:"
-  ]},
-  "Y": {[
+  ],
+  Y: [
     ":ycombinator:", ":yubico:"
-  ]},
-  "Z": {[
+  ],
+  Z: [
     ":zfs:", ":dpunch:", ":mta_z:"
-  ]}
-]};
+  ]
+};
 
 module.exports.alphabet = alphabet;

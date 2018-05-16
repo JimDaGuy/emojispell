@@ -1,4 +1,4 @@
-const emojis = require('../emojis.js');
+const emojis = require('./emojis.js');
 
 const spell = (request, response, params) => {
   var defaultText;
@@ -14,8 +14,8 @@ const spell = (request, response, params) => {
 
   for(var i = 0; i < defaultText.length; i++) {
       var currLetter = defaultText[i];
-      if(getLetter[currLetter])
-        emojiString += getLetter[currLetter];
+      if(getLetter(currLetter))
+        emojiString += getLetter(currLetter);
       else
         emojiString += currLetter;
   }

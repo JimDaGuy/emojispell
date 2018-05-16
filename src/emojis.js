@@ -8,7 +8,7 @@ const alphabet = {
   ],
   C: [
     ":c:", ":cpp:", ":csharp:", ":flag-colo:", ":star_and_crescent:", ":copyright:",
-     ":mta_c:"
+    ":mta_c:"
   ],
   D: [
     ":d:", ":duo:", ":mta_d:"
@@ -80,6 +80,36 @@ const alphabet = {
   ],
   Z: [
     ":zfs:", ":dpunch:", ":mta_z:"
+  ],
+  0: [
+    ":zero:"
+  ],
+  1: [
+    ":one:", ":mta_1:"
+  ],
+  2: [
+    ":two:", ":mta_2:", ":bf2:"
+  ],
+  3: [
+    ":three:", ":mta_3:"
+  ],
+  4: [
+    ":four:", ":mta_4:"
+  ],
+  5: [
+    ":five:", ":mta_5:", ":html5:"
+  ],
+  6: [
+    ":six:", ":mta_6exp:", ":mta_6:"
+  ],
+  7: [
+    ":seven:", ":mta_7exp:", ":mta_7:"
+  ],
+  8: [
+    ":8ball:", ":eight:"
+  ],
+  9: [
+    ":nine:"
   ],
   ' ': [
     ":nbsp:",

@@ -15,7 +15,7 @@ const onRequest = (request, response) => {
   const path = parsedUrl.pathname;
 
   response.writeHead(200, {'Content-Type': 'text/html'});
-  reponse.write("<div>Bop</div>");
+  response.write("<div>Bop</div>");
   response.end();
 };
 

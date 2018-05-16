@@ -20,8 +20,16 @@ const spell = (request, response, params) => {
         emojiString += currLetter;
   }
 
+  const responseJSON = {
+    "response_type": "in_channel",
+  }
+
+  responseJSON.text = emojiString;
+  const JSONString = JSON.stringify(responseJSON);
+  console.dir(JSONString);
+
   response.writeHead(200, {'Content-Type': 'application/json', 'response_type': 'in_channel'});
-  response.write(emojiString);
+  response.write(JSONString);
   response.end();
 };
 

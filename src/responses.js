@@ -20,7 +20,7 @@ const spell = (request, response, params) => {
         emojiString += currLetter;
   }
 
-  response.writeHead(200, {'Content-Type': 'application/json'});
+  response.writeHead(200, {'Content-Type': 'application/json', 'response_type': 'in_channel'});
   response.write(emojiString);
   response.end();
 };

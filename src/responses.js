@@ -16,7 +16,7 @@ const spell = (request, response, params) => {
       var currLetter = defaultText[i];
       if(defaultText.substring(i, 3) == ":B:") {
           emojiString += ":B:";
-          i += 3;
+          i += 2;
           continue;
       }
       if(getLetter(currLetter))

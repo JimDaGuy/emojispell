@@ -64,7 +64,7 @@ const alphabet = {
     ":tumblr:", ":tesla-motors:", ":jimbo:", ":mbta:", ":pgh_t:", ":latin_cross:"
   ],
   U: [
-    ":unilever:", ":unreal:", ":ophiuchus:"
+    ":unilever:", ":ophiuchus:"
   ],
   V: [
     ":vagrant:", ":venmo:", ":vitess:", ":vue:", ":vulf:", ":vim:", ":aries:"

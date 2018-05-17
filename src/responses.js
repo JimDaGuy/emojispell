@@ -14,7 +14,7 @@ const spell = (request, response, params) => {
 
   for(var i = 0; i < defaultText.length; i++) {
       var currLetter = defaultText[i];
-      if(defaultText.substring(i, 3) == ":B:") {
+      if(defaultText.substring(i, i+3) == ":B:") {
           emojiString += ":B:";
           i += 2;
           continue;
@@ -25,6 +25,8 @@ const spell = (request, response, params) => {
         emojiString += currLetter;
   }
 
+  emojiString += ` -${params.user_name}`;
+  
   const responseJSON = {
     "response_type": "in_channel",
   }

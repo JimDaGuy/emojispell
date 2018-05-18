@@ -4,7 +4,7 @@ const spell = (request, response, params) => {
   var defaultText;
 
   if(!params.text) {
-    defaultText = "Hi ya";
+    defaultText = "Hiya";
   } else {
     defaultText = params.text;
   }
@@ -25,7 +25,7 @@ const spell = (request, response, params) => {
         emojiString += currLetter;
   }
 
-  emojiString += ` -${params.user_name}`;
+  //emojiString += ` -${params.user_name}`;
   
   const responseJSON = {
     "response_type": "in_channel",

@@ -39,7 +39,7 @@ const alphabet = {
   ],
   M: [
     ":massdrop:", ":la_metro:", ":monero:", ":monster_energy:", ":paris_metro:",
-    ":wmata:", ":scorpius:", ":virgo:", ":m:", ":mta_m:"
+    ":wmata:", ":scorpius:", ":virgo:", ":m:", ":mta_m:", ":mesosphere:", ":mesos:"
   ],
   N: [
     ":n64:", ":netscape:", ":njt:", ":npm:", ":novell:", ":capricorn:", ":mta_n:"

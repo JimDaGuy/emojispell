@@ -22,7 +22,7 @@ const onRequest = (request, response) => {
   //    &user_name=jimmydigrazia
   //    &command=%2Fgiraffe
   //    &text=woop
-  //    &response_url=https%3A%2F%2Fhooks.slack.com%2Fcommands%2FT04S6SNC4%2F364355253504%2FuVdJLS5TRNHf1T7a78MRDBfL
+  //    &response_url=
   //console.log(params.text);
 
   responses.spell(request, response, params);

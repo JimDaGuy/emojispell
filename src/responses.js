@@ -35,7 +35,7 @@ const spell = (request, response, params) => {
   const JSONString = JSON.stringify(responseJSON);
   console.dir(JSONString);
 
-  response.writeHead(200, {'Content-Type': 'application/json', 'response_type': 'in_channel'});
+  response.writeHead(200, {'Content-Type': 'application/json', 'response_type': 'in_channel', 'as_user': 'true'});
   response.write(JSONString);
   response.end();
 };

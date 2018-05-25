@@ -25,17 +25,29 @@ const spell = (request, response, params) => {
         emojiString += currLetter;
   }
 
+  emojiJSON = {
+	  "response_type": "in_channel"
+  }
+  emojiJSON.text = emojiString
+
+  blameJSON = {
+	  "text": "From <@" + request.form['user_id'] + ">",
+	  "response_type": "in_channel"
+  }
+
+  // Sends 2 messages, the first with emoji, the second blaming the poster
+  url = request.form['response_url']
+  requests.post(url, json=JSON.stringify(emojiJSON))
+  requests.post(url, json=JSON.stringify(blameJSON))
+
   //emojiString += ` -${params.user_name}`;
   
   const responseJSON = {
-    "response_type": "in_channel",
+    "response_type": "ephemeral" //Deletes command
   }
-  
-  responseJSON.text = "From <@" + request.form['user_id'] +">:\n" + emojiString
   const JSONString = JSON.stringify(responseJSON);
-  console.dir(JSONString);
 
-  response.writeHead(200, {'Content-Type': 'application/json', 'response_type': 'in_channel'});
+  response.writeHead(200, {'Content-Type': 'application/json', 'response_type': 'ephemeral'});
   response.write(JSONString);
   response.end();
 };

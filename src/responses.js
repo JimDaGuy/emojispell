@@ -30,8 +30,8 @@ const spell = (request, response, params) => {
   const responseJSON = {
     "response_type": "in_channel",
   }
-
-  responseJSON.text = emojiString;
+  
+  responseJSON.text = "From <@" + request.form['user_id'] +">:\n" + emojiString
   const JSONString = JSON.stringify(responseJSON);
   console.dir(JSONString);
 

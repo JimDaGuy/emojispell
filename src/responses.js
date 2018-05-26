@@ -1,4 +1,5 @@
 const emojis = require('./emojis.js');
+var requests = require('request');
 
 const spell = (request, response, params) => {
   var defaultText;
@@ -24,18 +25,37 @@ const spell = (request, response, params) => {
       else
         emojiString += currLetter;
   }
-
-  //emojiString += ` -${params.user_name}`;
   
-  const responseJSON = {
+  var emojiJSON = {
     "response_type": "in_channel",
+    "text": emojiString
+  };
+  
+  var blameJSON = {
+    "response_type": "in_channel",
+    "text": "From <@" + params.user_id + ">"
+    // Uses the ID of the poster, since usernames are ephemeral
+  };
+  
+  var post_options = {
+    url: params.response_url,
+    method: "POST",
+    json: true
+  };
+  
+  post_options.json = emojiJSON
+  requests(post_options, function(error, response, body) {
+  });
+  
+  post_options.json = blameJSON
+  requests(post_options, function(error, response, body) {
+  });
+    
+  const responseJSON = {
+    "response_type": "ephemeral" // Delete the issued command
   }
-
-  responseJSON.text = emojiString;
   const JSONString = JSON.stringify(responseJSON);
-  console.dir(JSONString);
-
-  response.writeHead(200, {'Content-Type': 'application/json', 'response_type': 'in_channel'});
+  response.writeHead(200, {'Content-Type': 'application/json', 'response_type': 'ephemeral'});
   response.write(JSONString);
   response.end();
 };

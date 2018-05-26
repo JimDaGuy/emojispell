@@ -34,6 +34,7 @@ const spell = (request, response, params) => {
   var blameJSON = {
     "response_type": "in_channel",
     "text": "From <@" + params.user_id + ">"
+    // Uses the ID of the poster, since usernames are ephemeral
   };
   
   var post_options = {
@@ -49,15 +50,11 @@ const spell = (request, response, params) => {
   post_options.json = blameJSON
   requests(post_options, function(error, response, body) {
   });
-  
-  //emojiString += ` -${params.user_name}`;
-  
+    
   const responseJSON = {
-    "response_type": "ephemeral"
+    "response_type": "ephemeral" // Delete the issued command
   }
   const JSONString = JSON.stringify(responseJSON);
-  console.dir(JSONString);
-
   response.writeHead(200, {'Content-Type': 'application/json', 'response_type': 'ephemeral'});
   response.write(JSONString);
   response.end();

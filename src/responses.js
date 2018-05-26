@@ -1,4 +1,5 @@
 const emojis = require('./emojis.js');
+var requests = require('request');
 
 const spell = (request, response, params) => {
   var defaultText;
@@ -24,18 +25,40 @@ const spell = (request, response, params) => {
       else
         emojiString += currLetter;
   }
-
+  
+  var emojiJSON = {
+    "response_type": "in_channel",
+    "text": emojiString
+  };
+  
+  var blameJSON = {
+    "response_type": "in_channel",
+    "text": "From <@" + params.user_id + ">"
+  };
+  
+  var post_options = {
+    url: params.response_url,
+    method: "POST",
+    json: true
+  };
+  
+  post_options.json = emojiJSON
+  requests(post_options, function(error, response, body) {
+  });
+  
+  post_options.json = blameJSON
+  requests(post_options, function(error, response, body) {
+  });
+  
   //emojiString += ` -${params.user_name}`;
   
   const responseJSON = {
-    "response_type": "in_channel",
+    "response_type": "ephemeral"
   }
-
-  responseJSON.text = emojiString;
   const JSONString = JSON.stringify(responseJSON);
   console.dir(JSONString);
 
-  response.writeHead(200, {'Content-Type': 'application/json', 'response_type': 'in_channel'});
+  response.writeHead(200, {'Content-Type': 'application/json', 'response_type': 'ephemeral'});
   response.write(JSONString);
   response.end();
 };

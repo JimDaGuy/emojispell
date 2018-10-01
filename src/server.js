@@ -13,18 +13,6 @@ const onRequest = (request, response) => {
   const params = query.parse(parsedUrl.query);
   const path = parsedUrl.pathname;
 
-  //    /?token=
-  //    &team_id=T04S6SNC4
-  //    &team_domain=cshrit
-  //    &channel_id=CAQDXJK5F
-  //    &channel_name=testgiraffe
-  //    &user_id=U28N0PU5V
-  //    &user_name=jimmydigrazia
-  //    &command=%2Fgiraffe
-  //    &text=woop
-  //    &response_url=
-  //console.log(params.text);
-
   responses.spell(request, response, params);
 };
 
